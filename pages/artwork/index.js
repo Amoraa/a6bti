@@ -11,7 +11,7 @@ import validObjectIDList from '@/public/data/validObjectIDList.json'
 
 const PER_PAGE = 12
 
-export default function index() {
+export default function Index() {
     const [artworkList, setArtworkList] = useState([])
     const [page, setPage] = useState(1)
 
@@ -27,10 +27,7 @@ export default function index() {
     function nextPage() {
         setPage(page => page + 1)
     }
-    if (error) {
-        return <Error statusCode={404} />
-    } 
-    
+   
     useEffect(() => {
 
         
@@ -48,7 +45,12 @@ export default function index() {
 
         }
         setPage(1)
-    },[data])
+    },[data]) 
+    
+    if (error) {
+        return <Error statusCode={404} />
+    } 
+    
 
     if (!data) return 'Loading...'
 

@@ -8,7 +8,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { Button } from 'react-bootstrap';
 import { removeFromHistory } from '@/lib/userDate';
 
-export default function history() {
+export default function History() {
     const [searchHistory, setSearchHistory] = useAtom(searchHistoryAtom);
     const router = useRouter();
     if(!searchHistory) return null;

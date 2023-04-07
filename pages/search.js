@@ -7,7 +7,7 @@ import { useAtom } from "jotai";
 import { searchHistoryAtom } from '@/store'
 import { addToHistory } from '@/lib/userDate';
 
-export default function search() {
+export default function Search() {
     const router = useRouter();
     const [searchHistory, setSearchHistory] = useAtom(searchHistoryAtom);
     
